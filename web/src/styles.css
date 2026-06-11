@@ -1,0 +1,53 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at top left, #1e3a8a, #0f172a 36rem); }
+a { color: inherit; text-decoration: none; }
+button, .button { border: 0; border-radius: 999px; padding: .75rem 1rem; background: #38bdf8; color: #082f49; font-weight: 700; cursor: pointer; display: inline-block; }
+button.secondary { background: #334155; color: #e2e8f0; }
+input, textarea, select { width: 100%; border: 1px solid #334155; background: #0f172a; color: #e2e8f0; border-radius: .9rem; padding: .8rem; }
+textarea { min-height: 130px; resize: vertical; }
+main { max-width: 1180px; margin: 0 auto; padding: 2rem; }
+.nav { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 1.5rem; justify-content: space-between; padding: 1rem 2rem; background: rgba(15, 23, 42, .86); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(148, 163, 184, .18); }
+.brand { font-size: 1.4rem; font-weight: 900; letter-spacing: .04em; }
+.nav nav, .nav-user, .actions, .tabs, .inline-form, .row { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+.nav a.active { color: #38bdf8; }
+.hero, .panel { background: rgba(15, 23, 42, .76); border: 1px solid rgba(148, 163, 184, .18); border-radius: 1.5rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 20px 60px rgba(2, 6, 23, .25); }
+.hero h1 { font-size: clamp(2rem, 5vw, 4rem); margin: 0 0 1rem; }
+.stack { display: grid; gap: 1rem; }
+.narrow { max-width: 460px; margin: 4rem auto; }
+.searchbar { display: grid; grid-template-columns: 1fr 150px 120px auto; gap: .75rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.grid.small { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.media-card { overflow: hidden; display: grid; grid-template-columns: 110px 1fr; gap: 1rem; background: rgba(30, 41, 59, .8); border: 1px solid rgba(148, 163, 184, .18); border-radius: 1.2rem; padding: .75rem; transition: transform .15s ease, border-color .15s ease; }
+.media-card:hover { transform: translateY(-3px); border-color: #38bdf8; }
+.media-card img { width: 110px; height: 165px; object-fit: cover; border-radius: .8rem; }
+.media-card span, small { color: #94a3b8; display: block; margin-top: .25rem; }
+.media-card p { color: #cbd5e1; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.detail-hero { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; padding: 2rem; min-height: 420px; background-size: cover; background-position: center; border-radius: 1.5rem; margin-bottom: 1.5rem; }
+.detail-hero img { width: 240px; border-radius: 1rem; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.review-card, .activity, .notification { padding: 1rem; border-radius: 1rem; background: rgba(30, 41, 59, .7); border: 1px solid rgba(148, 163, 184, .18); margin: 1rem 0; }
+.notification.unread { border-color: #38bdf8; }
+.between { justify-content: space-between; }
+.tag, .chips span, .chips a { display: inline-block; padding: .3rem .7rem; border-radius: 999px; background: #1e40af; margin: .25rem; font-size: .85rem; }
+.tag.warning { background: #92400e; }
+.error { color: #fca5a5; }
+.avatar { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; }
+.profile { display: flex; gap: 1.5rem; align-items: center; }
+.tabs .active { background: #22c55e; color: #052e16; }
+.load-more { display: block; margin: 2rem auto; }
+@media (max-width: 760px) {
+  .nav { align-items: flex-start; flex-direction: column; }
+  .searchbar, .detail-hero { grid-template-columns: 1fr; }
+  .detail-hero img { width: 100%; max-width: 260px; }
+}
+
+button.danger { background: #ef4444; color: #fff; }
+.link-button { background: transparent; color: #38bdf8; padding: .2rem .4rem; font-size: .8rem; }
+.searchbar.extended { grid-template-columns: 1fr 140px 110px 130px auto; }
+.list-item { display: grid; gap: .5rem; }
+@media (max-width: 900px) { .searchbar.extended { grid-template-columns: 1fr; } }
